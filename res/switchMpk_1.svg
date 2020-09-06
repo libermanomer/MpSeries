@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0rc1 (09960d6, 2020-04-09)"
+   sodipodi:docname="switchMpk_1.svg"
+   width="7.3713231mm"
+   height="5.6178994mm"
+   version="1.1"
+   id="svg4226">
+  <sodipodi:namedview
+     inkscape:current-layer="g1391-5"
+     inkscape:window-maximized="0"
+     inkscape:window-y="0"
+     inkscape:window-x="0"
+     inkscape:cy="9.4094603"
+     inkscape:cx="15.423969"
+     inkscape:zoom="16.947537"
+     inkscape:snap-page="true"
+     showgrid="false"
+     id="namedview852"
+     inkscape:window-height="1050"
+     inkscape:window-width="1680"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     inkscape:document-rotation="0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     units="mm" />
+  <metadata
+     id="metadata14">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs12">
+    <linearGradient
+       id="linearGradient1145"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#d0d4d1;stop-opacity:1;"
+         offset="0"
+         id="stop1143" />
+    </linearGradient>
+    <linearGradient
+       osb:paint="solid"
+       id="linearGradient3532">
+      <stop
+         id="stop3530"
+         offset="0"
+         style="stop-color:#ff0000;stop-opacity:1;" />
+    </linearGradient>
+    <linearGradient
+       osb:paint="solid"
+       id="linearGradient1580">
+      <stop
+         id="stop1578"
+         offset="0"
+         style="stop-color:#80261a;stop-opacity:1;" />
+    </linearGradient>
+    <linearGradient
+       osb:paint="solid"
+       id="linearGradient4116">
+      <stop
+         id="stop4114"
+         offset="0"
+         style="stop-color:#9ea6a0;stop-opacity:1;" />
+    </linearGradient>
+    <linearGradient
+       osb:paint="solid"
+       id="linearGradient3145">
+      <stop
+         id="stop3143"
+         offset="0"
+         style="stop-color:#aeb4af;stop-opacity:1;" />
+    </linearGradient>
+    <linearGradient
+       osb:paint="solid"
+       id="linearGradient3133">
+      <stop
+         id="stop3131"
+         offset="0"
+         style="stop-color:#000000;stop-opacity:1;" />
+    </linearGradient>
+    <linearGradient
+       osb:paint="solid"
+       id="linearGradient3114">
+      <stop
+         id="stop3112"
+         offset="0"
+         style="stop-color:#292c31;stop-opacity:1;" />
+    </linearGradient>
+    <linearGradient
+       osb:paint="solid"
+       id="linearGradient3054">
+      <stop
+         id="stop3052"
+         offset="0"
+         style="stop-color:#b8bfba;stop-opacity:1;" />
+    </linearGradient>
+    <linearGradient
+       osb:paint="solid"
+       id="linearGradient3048">
+      <stop
+         id="stop3046"
+         offset="0"
+         style="stop-color:#0c0c0c;stop-opacity:1;" />
+    </linearGradient>
+    <linearGradient
+       y2="95.40947"
+       x2="274.2532"
+       y1="95.40947"
+       x1="274.1532"
+       gradientTransform="matrix(1,0,0,1.1432544,0.23109943,-13.116007)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3193"
+       xlink:href="#linearGradient3145"
+       inkscape:collect="always" />
+    <linearGradient
+       osb:paint="solid"
+       id="linearGradient1145-7">
+      <stop
+         id="stop1143-7"
+         offset="0"
+         style="stop-color:#88908c;stop-opacity:1;" />
+    </linearGradient>
+    <linearGradient
+       y2="311.42014"
+       x2="337.12827"
+       y1="311.42014"
+       x1="313.69232"
+       gradientTransform="matrix(2.037756,0,0,3.6279416,-756.87516,-1048.1572)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient1151-8"
+       xlink:href="#linearGradient4116"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="138.99957"
+       x2="180.86565"
+       y1="138.99957"
+       x1="132.88387"
+       gradientTransform="translate(-250.64311,-57.342658)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient1153-8"
+       xlink:href="#linearGradient1145-7"
+       inkscape:collect="always" />
+  </defs>
+  <text
+     id="text2951"
+     y="-48.041977"
+     x="329.0817"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+     xml:space="preserve"><tspan
+       y="-48.041977"
+       x="329.0817"
+       id="tspan2949"
+       sodipodi:role="line" /></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+     x="327.56207"
+     y="-40.629139"
+     id="text1107"><tspan
+       sodipodi:role="line"
+       id="tspan1105"
+       x="327.56207"
+       y="-40.629139" /></text>
+  <g
+     id="g1391"
+     transform="matrix(0.5,0,0,0.5,33.447145,-30.211961)">
+    <g
+       transform="matrix(1.1258931,0,0,1.1258931,66.538896,-10.280037)"
+       id="g1391-5">
+      <rect
+         ry="1.363447"
+         y="64"
+         x="-117.3113"
+         height="35.313843"
+         width="47.086033"
+         id="rect1149-4"
+         style="opacity:0.993569;fill:url(#linearGradient1151-8);fill-opacity:1;stroke:url(#linearGradient1153-8);stroke-width:2.40378;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+         rx="0.34086174" />
+    </g>
+  </g>
+</svg>
