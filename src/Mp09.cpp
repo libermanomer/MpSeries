@@ -1,6 +1,6 @@
 #include "MpSeries.hpp"
 
-//the module is based on CV-CC written by Andrew Belt
+//this module is based on CV-CC written by Andrew Belt
 //special thanks to Dave French from Studio 6+1 for helping me
 //understand deeply every piece of the code
 
