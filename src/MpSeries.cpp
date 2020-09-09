@@ -10,4 +10,6 @@ void init(rack::Plugin *p) {
     pluginInstance = p;
     
     p->addModel(modelMpMapper);
+    p->addModel(modelMp09);
+    
 }
