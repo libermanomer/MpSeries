@@ -4,6 +4,8 @@ using namespace rack;
 extern Plugin* pluginInstance;
 
 extern Model* modelMpMapper;
+extern Model* modelMp09;
+
 
 
 struct jack : SvgPort{
@@ -151,6 +153,12 @@ struct MpSlidePot : SvgSlider {
         setHandleSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/SlidePotHandle.svg")));
         background->box.pos = margin;
         box.size = background->box.size.plus(margin.mult(2));
+    }
+};
+
+struct PJ301M : SvgPort{
+PJ301M() {
+    setSvg(APP->window->loadSvg(asset::plugin(pluginInstance,"res/PJ301M.svg")));
     }
 };
 
