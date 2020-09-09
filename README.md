@@ -17,6 +17,5 @@ MpSeries is a VCV rack moudle collection
 # CV-09
  with CV-09 you send CC to your Roland TR-09 device.
 
- 
-  ![alt text](https://github.com/libermnnn/MpSeries/blob/Added-module-CV-09/images/CV-09.png?raw=true)	
+ ![alt text](https://github.com/libermnnn/MpSeries/blob/MpSeries-1.0.1/images/CV-09.png?raw=true)	
  
