@@ -16,6 +16,12 @@
       "slug": "MpMap",
       "name": "MpMapper",
       "tags": ["CONTROLLER"]
+    },
+        {
+      "slug": "Mp09",
+      "name": "CV-09",
+      "tags": ["CONTROLLER"]
     }
+
        ]
 }
