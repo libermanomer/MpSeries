@@ -130,7 +130,7 @@ MpMapperWidget::MpMapperWidget(MpMapper *module) {
    {
        SvgPanel *panel = new SvgPanel();
        panel->box.size = box.size;
-       panel->setBackground(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mpmapper.svg")));
+       panel->setBackground(APP->window->loadSvg(asset::plugin(pluginInstance, "res/MpMapper.svg")));
        addChild(panel);
     }
     
