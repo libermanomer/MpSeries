@@ -92,9 +92,9 @@ struct MpMapperWidget : ModuleWidget {
         json_t* rootJ = ModuleWidget::toJson();
 
         // text
-        json_object_set_new(rootJ, "text", json_string(textField1->text.c_str()));
-        json_object_set_new(rootJ, "text", json_string(textField2->text.c_str()));
-        json_object_set_new(rootJ, "text", json_string(textField3->text.c_str()));
+        json_object_set_new(rootJ, "text1", json_string(textField1->text.c_str()));
+        json_object_set_new(rootJ, "text2", json_string(textField2->text.c_str()));
+        json_object_set_new(rootJ, "text3", json_string(textField3->text.c_str()));
 
         return rootJ;
     }
@@ -104,15 +104,15 @@ struct MpMapperWidget : ModuleWidget {
         ModuleWidget::fromJson(rootJ);
 
         // text
-        json_t* text1 = json_object_get(rootJ, "text");
+        json_t* text1 = json_object_get(rootJ, "text1");
         if (text1)
         textField1->text = json_string_value(text1);
         
-        json_t* text2= json_object_get(rootJ, "text");
+        json_t* text2= json_object_get(rootJ, "text2");
         if (text2)
         textField2->text = json_string_value(text2);
 
-        json_t* text3 = json_object_get(rootJ, "text");
+        json_t* text3 = json_object_get(rootJ, "text3");
         if (text3)
         textField3->text = json_string_value(text3);
 
@@ -130,7 +130,7 @@ MpMapperWidget::MpMapperWidget(MpMapper *module) {
    {
        SvgPanel *panel = new SvgPanel();
        panel->box.size = box.size;
-       panel->setBackground(APP->window->loadSvg(asset::plugin(pluginInstance, "res/MpMapper.svg")));
+       panel->setBackground(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mpmapper.svg")));
        addChild(panel);
     }
     
