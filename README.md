@@ -13,9 +13,9 @@ MpSeries is a VCV rack moudle collection
  
  
 # CV-09 
-with CV-09 you send CC to your Roland TR-09 device.
+
+CV-09 let you send Control Change messages to your Roland TR-09 device.
 CV-09 sending CC messages to channel 1.
+TR-09 default channel is 10, to change it you need to press on the menu button of your device and set it to 1.
 
-
-by default TR-09 receiving midi data only from CH 10.
 ![alt text](https://github.com/libermnnn/MpSeries/blob/MpSeries-1.0.1/images/CV-09.png?raw=true)
