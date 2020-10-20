@@ -1,6 +1,6 @@
 # MpSeries 
 MpSeries is a VCV rack moudle collection 
-latest version is 1.0.2
+### latest version is 1.0.2
 
 
 
