@@ -41,7 +41,7 @@ struct CCMidiOutput : midi::Output {
 
 struct Mp09 : Module {
     enum ParamIds {
-        NUM_PARAMS 
+        NUM_PARAMS
     };
     enum InputIds {
           ENUMS(CC_INPUTS, numControllers),
@@ -83,10 +83,10 @@ struct Mp09 : Module {
         NUM_INPUTS
     };
     enum OutputIds {
-        NUM_OUTPUTS 
+        NUM_OUTPUTS
     };
     enum LightIds {
-        NUM_LIGHTS 
+        NUM_LIGHTS
     };
     
     

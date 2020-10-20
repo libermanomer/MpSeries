@@ -1,4 +1,4 @@
-#include "rack.hpp" 
+#include "rack.hpp"
 
 using namespace rack;
 extern Plugin* pluginInstance;
@@ -70,22 +70,6 @@ mpBKnob() {
     addChild(shadow);
     }
 };
-struct switch_0 : SvgSwitch {
-switch_0() {
-    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/switchMpk_0.svg")));
-    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/switchMpk_1.svg")));
-    sw->wrap();
-    box.size = sw->box.size;
-    }
-};
-struct switchMpk_0 : SvgSwitch {
-switchMpk_0() {
-    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/switchMpk_0.svg")));
-    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/switchMpk_1.svg")));
-    sw->wrap();
-    box.size = sw->box.size;
-    }
-};
 struct mpcvKnob : SvgKnob{
 mpcvKnob() {
     box.size = Vec(25, 25);
@@ -99,28 +83,20 @@ mpcvKnob() {
 };
 struct ButtonMp : SvgSwitch {
     ButtonMp(){
-    momentary = true;
+    momentary = false;
     addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/ButtonMp.svg")));
-    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/ButtonMpPushed.svg")));
+    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/ButtonMp.svg")));
     sw->wrap();
     box.size = sw->box.size;
     }
 };
+
+
 struct button : SvgSwitch {
     button(){
     momentary = true;
     addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/ButtonMp.svg")));
     addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/ButtonMpPushed.svg")));
-    sw->wrap();
-    box.size = sw->box.size;
-    }
-};
-struct switchPos_0 : SvgSwitch {
-switchPos_0() {
-    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/switchPos_0.svg")));
-    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/switchPos_1.svg")));
-    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/switchPos_2.svg")));
-    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/switchPos_3.svg")));
     sw->wrap();
     box.size = sw->box.size;
     }
@@ -161,5 +137,144 @@ PJ301M() {
     setSvg(APP->window->loadSvg(asset::plugin(pluginInstance,"res/PJ301M.svg")));
     }
 };
+
+struct MpData : SvgSwitch {
+MpData() {
+
+    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/MpData_0.svg")));
+    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/MpData_1.svg")));
+    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/MpData_2.svg")));
+    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/MpData_3.svg")));
+    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/MpData_4.svg")));
+    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/MpData_5.svg")));
+    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/MpData_6.svg")));
+    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/MpData_7.svg")));
+
+    sw->wrap();
+    box.size = sw->box.size;
+    shadow->hide ();
+    
+    }
+};
+ 
+
+
+// Lit Svg Widget, Thanks to Aria Salvatrice https://github.com/AriaSalvatrice
+
+// ---- BASE For Light SVG WIDGETS----
+
+struct LitSvgWidget : LightWidget {
+    FramebufferWidget *fb;
+    std::shared_ptr<Svg> svg;
+    bool hidden = false;
+
+    void wrap() {
+        if (svg && svg->handle) {
+            box.size = math::Vec(svg->handle->width, svg->handle->height);
+        }
+        else {
+            box.size = math::Vec();
+        }
+    }
+
+    void setSvg(std::shared_ptr<Svg> svg) {
+        this->svg = svg;
+        hidden = false;
+        wrap();
+    }
+
+    void hide() {
+        hidden = true;
+    }
+
+    void show() {
+        hidden = false;
+    }
+
+    void draw(const DrawArgs& args) override {
+        if (svg && svg->handle && !hidden) {
+            svgDraw(args.vg, svg->handle);
+        }
+    }
+};
+
+
+// This is a SvgSwitch with special support for Lights Off: every frame past the first
+// is displayed as a lit overlay, while the first frame is constantly displayed unlit.
+struct LitSvgSwitch : Switch {
+    FramebufferWidget* fb;
+    CircularShadow* shadow;
+    SvgWidget* sw;
+    LitSvgWidget* lsw;
+    std::vector<std::shared_ptr<Svg>> frames;
+
+    LitSvgSwitch()  {
+        fb = new FramebufferWidget;
+        addChild(fb);
+
+        shadow = new CircularShadow;
+        fb->addChild(shadow);
+        shadow->box.size = math::Vec();
+
+        sw = new SvgWidget;
+        fb->addChild(sw);
+
+        lsw = new LitSvgWidget;
+        fb->addChild(lsw);
+    }
+
+    /** Adds an SVG file to represent the next switch position */
+    void addFrame(std::shared_ptr<Svg> svg) {
+        frames.push_back(svg);
+        // If this is our first frame, automatically set SVG and size
+        if (!sw->svg) {
+            sw->setSvg(svg);
+            box.size = sw->box.size;
+            lsw->box.size = sw->box.size;
+            fb->box.size = sw->box.size;
+            // Move shadow downward by 10%
+            shadow->box.size = sw->box.size;
+            shadow->box.pos = math::Vec(0, sw->box.size.y * 0.10);
+        }
+    }
+
+    void onChange(const event::Change& e) override {
+        if (!frames.empty() && paramQuantity) {
+            int index = (int) std::round(paramQuantity->getValue() - paramQuantity->getMinValue());
+            index = math::clamp(index, 0, (int) frames.size() - 1);
+            sw->setSvg(frames[0]);
+            if (index >= 0) {
+                lsw->setSvg(frames[index]);
+            } else {
+                lsw->hide();
+            }
+            fb->dirty = true;
+        }
+        ParamWidget::onChange(e);
+    }
+ 
+};
+
+
+
+struct MpDataLight : LitSvgSwitch {
+MpDataLight() {
+
+    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/MpData_0.svg")));
+    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/MpData_1.svg")));
+    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/MpData_2.svg")));
+    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/MpData_3.svg")));
+    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/MpData_4.svg")));
+    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/MpData_5.svg")));
+    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/MpData_6.svg")));
+    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance,"res/MpData_7.svg")));
+
+    sw->wrap();
+    box.size = sw->box.size;
+    shadow->hide ();
+    
+    }
+};
+ 
 
 
