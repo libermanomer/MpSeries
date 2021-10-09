@@ -2,7 +2,7 @@
 MpSeries is a VCV rack moudle collection 
 ### Latest version is 1.0.2
 
-after rack v2 will be released MpMapper will be updated with a new GUI and more features.
+when rack v2 will be released MpMapper will be updated with a new GUI and more features.
 
 for now Mp-09 is ready to Rack V2 - have fun controlling your TR09 boutique :)
 
