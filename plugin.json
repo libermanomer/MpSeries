@@ -1,6 +1,6 @@
 {
   "slug": "MpSeries",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "license": "GPL-3.0-only",
   "name": "MpSeries",
   "brand": "MpSeries",
@@ -12,11 +12,6 @@
   "sourceUrl": "https://github.com/libermnnn/MpSeries",
   "changelogUrl": "https://github.com/OmerOki/MpSeries/blob/MpSeries-1.0.2/CHANGELOG.md",
   "modules": [
-    {
-      "slug": "MpMap",
-      "name": "MpMapper",
-      "tags": ["CONTROLLER"]
-    },
         {
       "slug": "Mp09",
       "name": "CV-09",

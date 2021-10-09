@@ -1,16 +1,15 @@
 #include "MpSeries.hpp"
 
 //this module is based on CV-CC written by Andrew Belt
-//special thanks to Dave French from Studio 6+1 for helping me
-//understand deeply every piece of the code
+//thanks to Dave French from Studio 6+1 for the help
 
 static constexpr int numControllers = 35;
 
 
-int ccs[numControllers] = {20, 21, 23, 24, 25, 26, 28, 29, 46, 47,
-48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58,
-59, 60, 61, 62, 63, 80, 81, 82, 83, 84, 85,
-86, 87, 88};
+int ccs[numControllers] = {
+     20, 21, 23, 24, 25, 26, 28, 29, 46, 47, 48,
+     49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59,
+     60, 61, 62, 63, 80, 81, 82, 83, 84, 85, 86, 87, 88};
 
 struct CCMidiOutput : midi::Output {
     int lastValues[128];
